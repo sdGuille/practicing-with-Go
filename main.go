@@ -33,8 +33,19 @@ const (
 	Thursday
 	Friday
 	Saturday
-)
+) // this kind of code is a sequence value
 
 func main() {
-	fmt.Println(Saturday)
+	// fmt.Println(Saturday)
+	// fmt.Println(Sunday)
+	// fmt.Println(Thursday)
+
+	textString := "Hi!, This is a string"
+	firstCharacter := textString[0]
+	lastCharacter := textString[len(textString)-1]
+
+	fmt.Println(textString[0]) // --> this is because this type is uint8
+	fmt.Printf("%c\n", firstCharacter)
+	fmt.Printf("%c", lastCharacter)
+
 }
