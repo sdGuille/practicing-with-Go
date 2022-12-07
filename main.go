@@ -2,26 +2,42 @@ package main
 
 import "fmt"
 
-// Array
+// **** Slice **** //
 
 func main() {
-	myBand := [4]string{"Guillermo", "Katherine", "Diego", "Carlos"}
-	arrayNumber := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	numbers := []int{1, 2, 3, 4}
 
-	starCalification := [...]string{ // those three dots means undefined long of elements.
-		"☆",
-		"☆☆",
-		"☆☆☆",
-		"★★★★",
-		"★★★★★",
-	}
+	numbers = append(numbers, 5)
+	fmt.Println(numbers)
 
-	currency := [...]string{0: "Canadian Dollar", 1: "Peso Mexicano", 2: "Dollar", 4: "Yuang"}
+	newSlice := numbers[0:3]
+	numbers[0] = 30
 
-	fmt.Println(arrayNumber)
-	fmt.Println(myBand)
-	fmt.Println(starCalification)
+	fmt.Println(newSlice) // here we got 3 values from numbers variable
+	fmt.Println(numbers)
+	// slices are only a reference of a pice value from Array
 
-	fmt.Println(currency[3]) // we don't
-	fmt.Println(currency[2])
+	// let's see another example about slice
+
+	months := []string{"January", "February", "March", "April", "May", "June",
+		"July", "August", "September", "October", "November"}
+
+	// Pointer
+	// Lenght
+	// Capacity
+
+	lenght := len(months)
+	capacity := cap(months)
+
+	// Printf
+	fmt.Printf("The lenght is: %v, The capacity is: %v, direction %p \n", lenght, capacity, months)
+	months = append(months, "December") // if the structure is on max capacity, this will generate new array
+
+	lenght = len(months)
+	capacity = cap(months)
+
+	fmt.Printf("The lenght is: %v, The capacity is: %v, direction %p \n", lenght, capacity, months)
+	// if we can see on the terminal the direction changes
+	// this means: We are working with a new object
+
 }
