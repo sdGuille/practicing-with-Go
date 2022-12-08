@@ -1,20 +1,33 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-// **** Make function Slice **** //
+// **** Map **** //
 
 func main() {
-	myNewSlice := make([]int, 3, 3)
+	days := make(map[int]string)
 
-	myNewSlice[0] = 100
-	myNewSlice[1] = 200
-	myNewSlice[2] = 300
+	days[0] = "Sunday"
+	days[1] = "Monday"
+	days[2] = "Tuesday"
+	days[3] = "Wednesday"
+	days[4] = "Thursday"
+	days[5] = "Friday"
+	days[6] = "Saturday"
 
-	myNewSlice = append(myNewSlice, 400)
+	// how to delete a key
 
-	fmt.Println(myNewSlice)
-	fmt.Println(len(myNewSlice))
-	fmt.Println(cap(myNewSlice))
+	delete(days, 1)
 
+	fmt.Println(days)
+
+	// something more complicated
+
+	users := make(map[string][]int)
+
+	users["Guillermo"] = []int{9, 10, 8, 10, 9}
+
+	fmt.Println(users) // this gonna print Guillermo Califications
 }
