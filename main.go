@@ -4,16 +4,19 @@ import (
 	"fmt"
 )
 
-// **** Control Flow Conditionals **** //
+// **** Understanding capacity **** //
 
 func main() {
-	users := map[int]string{} // make
-	users[1] = "diego"
-	users[2] = "kathy"
-	users[3] = "guillo"
-	users[4] = "unknow"
-
-	for key, value := range users {
-		fmt.Println("User number: ", key, "= ", value)
-	}
+	var x []int
+	fmt.Println(x, len(x), cap(x))
+	x = append(x, 10)
+	fmt.Println(x, len(x), cap(x))
+	x = append(x, 20)
+	fmt.Println(len(x), cap(x))
+	x = append(x, 30)
+	fmt.Println(x, len(x), cap(x))
+	x = append(x, 40)
+	fmt.Println(x, len(x), cap(x))
+	x = append(x, 50)
+	fmt.Println(x, len(x), cap(x))
 }
