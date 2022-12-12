@@ -2,31 +2,38 @@ package main
 
 import "fmt"
 
-// **** Understanding slices **** //
+// **** Conditionals **** //
 
 func main() {
+	var age int
+	fmt.Println(" Enter your age: ")
+	fmt.Scanf("%d", &age)
 
-	// Slicing slices
+	if age < 18 {
+		fmt.Println("You are not able to continue")
+	} else {
+		fmt.Println("Welcome to this forum")
+	}
 
-	x := []int{1, 2, 3, 4}
-	y := x[:2]
-	z := x[1:]
-	d := x[1:3]
-	e := x[:]
+	var calification int
 
-	fmt.Println("x:", x)
-	fmt.Println("y:", y)
-	fmt.Println("z:", z)
-	fmt.Println("d:", d)
-	fmt.Println("e:", e)
+	fmt.Print("Write your calification: ")
+	fmt.Scanf("%d", &calification)
 
-	fmt.Println("------------------")
-	fmt.Println("Slices with overlapping storage:")
-	x[1] = 20
-	y[0] = 10
-	z[1] = 30
-	fmt.Println("x:", x)
-	fmt.Println("y:", y)
-	fmt.Println("z:", z)
+	if calification == 10 {
+		fmt.Println("Awsome your calification is perfect!")
+	} else {
+		if calification == 8 || calification == 9 {
+			fmt.Println("Great job!")
+		} else {
+			if calification == 6 || calification == 7 {
+				fmt.Println("You pass the grade but need study more")
+			} else {
+				if calification >= 0 && calification <= 5 {
+					fmt.Println("You Fail the grade :(")
+				}
+			}
+		}
+	}
 
 }
