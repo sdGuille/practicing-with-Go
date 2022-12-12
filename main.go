@@ -4,30 +4,16 @@ import (
 	"fmt"
 )
 
-// **** Map **** //
+// **** Control Flow Conditionals **** //
 
 func main() {
-	days := make(map[int]string)
+	users := map[int]string{} // make
+	users[1] = "diego"
+	users[2] = "kathy"
+	users[3] = "guillo"
+	users[4] = "unknow"
 
-	days[0] = "Sunday"
-	days[1] = "Monday"
-	days[2] = "Tuesday"
-	days[3] = "Wednesday"
-	days[4] = "Thursday"
-	days[5] = "Friday"
-	days[6] = "Saturday"
-
-	// how to delete a key
-
-	delete(days, 1)
-
-	fmt.Println(days)
-
-	// something more complicated
-
-	users := make(map[string][]int)
-
-	users["Guillermo"] = []int{9, 10, 8, 10, 9}
-
-	fmt.Println(users) // this gonna print Guillermo Califications
+	for key, value := range users {
+		fmt.Println("User number: ", key, "= ", value)
+	}
 }
