@@ -22,18 +22,14 @@ func main() {
 
 	if calification == 10 {
 		fmt.Println("Awsome your calification is perfect!")
+	} else if calification == 8 || calification == 9 {
+		fmt.Println("Great job!")
+	} else if calification == 6 || calification == 7 {
+		fmt.Println("You pass the grade but need study more")
+	} else if calification >= 0 && calification <= 5 {
+		fmt.Println("You Fail the grade :(")
 	} else {
-		if calification == 8 || calification == 9 {
-			fmt.Println("Great job!")
-		} else {
-			if calification == 6 || calification == 7 {
-				fmt.Println("You pass the grade but need study more")
-			} else {
-				if calification >= 0 && calification <= 5 {
-					fmt.Println("You Fail the grade :(")
-				}
-			}
-		}
+		fmt.Println("Invalid Calification")
 	}
 
 }
