@@ -1,33 +1,33 @@
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-// FUNCTION WITHOUT PARAMETERS
+// // FUNCTION WITHOUT PARAMETERS
 
-func sayHello() {
-	fmt.Println("Hello Everyone")
-}
+// func sayHello() {
+// 	fmt.Println("Hello Everyone")
+// }
 
-// FUNCTION WITH TWO ARGUMENTS
+// // FUNCTION WITH TWO ARGUMENTS
 
-func sum(a int, b int) int {
-	return a + b
-}
+// func sum(a int, b int) int {
+// 	return a + b
+// }
 
-// FUNCTION RETURNING SEVERAL VALUES.
+// // FUNCTION RETURNING SEVERAL VALUES.
 
-func ops(a int, b int) (int, int) {
-	return a + b, a - b
-}
+// func ops(a int, b int) (int, int) {
+// 	return a + b, a - b
+// }
 
-func main() {
-	result := sum(2, 5)
-	fmt.Println(result)
+// func main() {
+// 	result := sum(2, 5)
+// 	fmt.Println(result)
 
-	sum, subs := ops(2, 2)
-	fmt.Println("2+2=", sum, "2-2=", subs)
-	b, _ := ops(10, 2)
-	fmt.Println("10+2=", b)
+// 	sum, subs := ops(2, 2)
+// 	fmt.Println("2+2=", sum, "2-2=", subs)
+// 	b, _ := ops(10, 2)
+// 	fmt.Println("10+2=", b)
 
-	sayHello()
-}
+// 	sayHello()
+// }

@@ -4,24 +4,22 @@ import (
 	"fmt"
 )
 
-// **** Enums declaration **** //
+func accumulator(increment int) func() int {
+	i := 0
+	return func() int {
+		i = i + increment
+		return i
+	}
+}
 
-type DayOfTheWeek uint8
-
-const (
-	Sunday DayOfTheWeek = iota
-	Monday
-	Tuesday
-	Wednesday
-	Thursday
-	Friday
-	Saturday
-)
+// **** Function closure.
 
 func main() {
-	// fmt.Println("Save the World with GO!!!")
-	fmt.Printf("Monday is %d\n", Monday)
-	fmt.Printf("Friday is %d\n", Friday)
-	fmt.Printf("Sunday is %d\n", Sunday)
+	a := accumulator(1)
+	b := accumulator(2)
 
+	fmt.Println("a", "b")
+	for i := 0; i < 5; i++ {
+		fmt.Println(a(), b())
+	}
 }
